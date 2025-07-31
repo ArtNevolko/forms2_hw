@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create an Account</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="forms-wrapper">
+		<div class="form-container">
+			<h1 class="form-title">Create an Account</h1>
+			<form>
+				<div class="form-row">
+					<div class="form-group form-group-flex">
+						<label for="firstName">First Name</label>
+						<input type="text" id="firstName" name="firstName" required>
+					</div>
+					<div class="form-group form-group-flex">
+						<label for="lastName">Last Name</label>
+						<input type="text" id="lastName" name="lastName" required>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="email">E-mail</label>
+					<input type="email" id="email" name="email" required>
+					<div class="email-note">We'll never share your email with anyone else.</div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="radio-group">
+						<div class="radio-option">
+							<input type="radio" id="male" name="gender" value="male" checked>
+							<label for="male">Male</label>
+						</div>
+						<div class="radio-option">
+							<input type="radio" id="female" name="gender" value="female">
+							<label for="female">Female</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group form-group-flex select-arrows">
+						<label for="country">Country</label>
+						<select id="country" name="country" required>
+							<option value="">Select</option>
+							<option value="us">United States</option>
+							<option value="ca">Canada</option>
+							<option value="uk">United Kingdom</option>
+							<option value="de">Germany</option>
+							<option value="fr">France</option>
+						</select>
+					</div>
+					<div class="form-group form-group-flex">
+						<label for="city">City</label>
+						<input type="text" id="city" name="city" required>
+					</div>
+				</div>
+
+				<button type="submit" class="submit-btn">Sign Up</button>
+
+				<div class="terms-text">
+					By clicking the 'Sign Up' button, you confirm that you accept our<br>
+					<a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+				</div>
+
+				<div class="login-link">
+					<span>Have an account?</span><a href="#">Log In</a>
+				</div>
+			</form>
+		</div>
+		<div class="form-container profile-form">
+			<h1 class="form-title">Profile</h1>
+			<form>
+				<div class="avatar-section">
+					<div class="avatar-container">
+						<img src="./img/avatar.png" alt="Avatar" class="avatar-image">
+					</div>
+					<div class="avatar-upload">
+						<div class="upload-controls">
+							<label for="fileInput" class="upload-area">
+								<input type="file" id="fileInput" class="file-input">
+								<img src="./img/camera_icon.svg" alt="camera_icon">
+							</label>
+							<button type="button" class="delete-btn" onclick="clearForm()"></button>
+						</div>
+						<p class="upload-text">Up to 1 MB (300x300 px)</p>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group form-group-flex">
+						<label for="profileName">Name</label>
+						<input type="text" id="profileName" name="profileName" required>
+					</div>
+					<div class="form-group form-group-flex">
+						<label for="profileEmail">E-mail</label>
+						<input type="email" id="profileEmail" name="profileEmail" required>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group form-group-flex select-arrows">
+						<label for="profileCountry">Country</label>
+						<select id="profileCountry" name="profileCountry" required>
+							<option value="">Select</option>
+							<option value="us">United States</option>
+							<option value="ca">Canada</option>
+							<option value="uk">United Kingdom</option>
+							<option value="de">Germany</option>
+							<option value="fr">France</option>
+						</select>
+					</div>
+					<div class="form-group form-group-flex">
+						<label for="profileCity">City</label>
+						<input type="text" id="profileCity" name="profileCity" required>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group form-group-flex">
+						<label for="zipCode">Zip Code</label>
+						<input type="text" id="zipCode" name="zipCode" required>
+					</div>
+					<div class="form-group form-group-flex">
+						<label for="phoneNumber">Phone Number</label>
+						<input type="text" id="phoneNumber" name="phoneNumber" required>
+					</div>
+				</div>
+
+				<button type="submit" class="submit-btn update-btn">Update</button>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		function clearForm() {
+			document.querySelectorAll('form').forEach(form => form.reset());
+		}
+	</script>
+</body>
+</html>
